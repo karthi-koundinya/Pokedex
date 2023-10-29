@@ -1,0 +1,15 @@
+
+
+li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        text-transform: capitalize;
+    }
+
+    span {
+        font-weight: 700;
+    }
+} 

@@ -1,0 +1,10 @@
+<form [formGroup]="searchForm" (ngSubmit)="searchPokemon()">
+    <input type="text" formControlName="searchQuery" placeholder="Enter Pokemon Name">
+    <button type="submit">Search</button>
+  </form>
+  <div *ngIf="pokemon">
+    <h2>{{ pokemon.name }}</h2>
+    <img [src]="pokemonService.getSpriteUrl(pokemon.orderNumber)" alt="{{ pokemon.name }}">
+  </div>
+  <div *ngIf="errorMessage">{{ errorMessage }}</div>
+  

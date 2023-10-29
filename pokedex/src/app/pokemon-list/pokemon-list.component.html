@@ -1,0 +1,10 @@
+<div class="d-flex flex-row flex-wrap list-unstyled justify-content-center mx-5">
+    <ng-container *ngIf="(pokemons$ | async) as pokemons else loading">
+        <app-pokemon-list-item *ngFor="let pokemon of pokemons; let i = index" [pokemon]="pokemon" [no]="i+1" >
+        </app-pokemon-list-item>
+    </ng-container>
+
+    <ng-template #loading>
+        <p  class="mx-auto display-4">Loading...</p>
+    </ng-template>
+</div>
